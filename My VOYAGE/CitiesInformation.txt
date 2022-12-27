@@ -1,0 +1,2 @@
+The city Name is: makkah   its Budget is: 150   its Members is: 5   its Hotel is: mo   its A.Date is: 2022-12-27
+

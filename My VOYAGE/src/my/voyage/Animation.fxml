@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="animationClick" minHeight="550.0" minWidth="760.0" onMouseClicked="#showSceneOne" prefHeight="550.0" prefWidth="760.0" style="-fx-background-color: D2EBF6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my.voyage.AnimationController">
+   <children>
+      <ImageView fx:id="Back_img" fitHeight="550.0" fitWidth="760.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic10.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="Car_img" fitHeight="315.0" fitWidth="492.0" layoutX="-324.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic12.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tree_img" fitHeight="279.0" fitWidth="464.0" layoutX="596.0" layoutY="240.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic16.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bag_img1" fitHeight="150.0" fitWidth="200.0" layoutX="-110.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic14.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bag_img2" fitHeight="150.0" fitWidth="200.0" layoutX="-110.0" layoutY="357.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic15.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="name_img" fitHeight="126.0" fitWidth="257.0" layoutX="238.0" layoutY="-78.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic9.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="550.0" minWidth="760.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my.voyage.AddLocationController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="760.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="550.0" fitWidth="563.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic6.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblFormLocationName" layoutX="399.0" layoutY="157.0" text="Name" />
+      <Label fx:id="lblFormLocationBudget" layoutX="394.0" layoutY="213.0" text="Budget" />
+      <Label fx:id="lblFormLocationDate" layoutX="405.0" layoutY="261.0" text="Date" />
+      <Label fx:id="lblFormLocationTime" layoutX="404.0" layoutY="307.0" text="Time" />
+      <Label fx:id="lblFormLocationLink" layoutX="367.0" layoutY="356.0" text="Location Link" />
+      <Label fx:id="lblFormLocationPhoto" layoutX="367.0" layoutY="405.0" text="Add Photo " />
+      <TextField fx:id="tfFormLocationName" layoutX="504.0" layoutY="156.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="tfFormLocationBudget" layoutX="504.0" layoutY="212.0" prefHeight="25.0" prefWidth="178.0" />
+      <TextField fx:id="tfFormLocationLink" layoutX="504.0" layoutY="355.0" prefHeight="25.0" prefWidth="178.0" />
+      <Button fx:id="btnAddLocation" layoutX="497.0" layoutY="449.0" mnemonicParsing="false" onAction="#addLocation" text="Add" />
+      <Button fx:id="btnCancelNewLocation" layoutX="581.0" layoutY="449.0" mnemonicParsing="false" onAction="#cancelNewLocation" text="Cancel" />
+      <DatePicker fx:id="formLocationDate" layoutX="506.0" layoutY="260.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label fx:id="alert" layoutX="332.0" layoutY="491.0" prefHeight="54.0" prefWidth="424.0" textFill="#7a3310" />
+      <Button fx:id="btnLocaitonPhoto" layoutX="554.0" layoutY="401.0" mnemonicParsing="false" onAction="#uploadLocationPhoto" prefHeight="38.0" prefWidth="133.0" text="Select file" />
+      <Text fill="#064857" layoutX="425.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Location" />
+      <Label layoutX="591.0" layoutY="308.0" text=":" />
+      <ComboBox fx:id="cbHours" layoutX="505.0" layoutY="308.0" prefHeight="31.0" prefWidth="79.0" visibleRowCount="5" />
+      <ComboBox fx:id="cbMinutes" layoutX="603.0" layoutY="308.0" prefHeight="31.0" prefWidth="79.0" visibleRowCount="5" />
+  
+   </children>
+</AnchorPane>

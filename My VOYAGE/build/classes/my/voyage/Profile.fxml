@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" minHeight="550.0" minWidth="760.0" prefHeight="550.0" prefWidth="760.0" style="-fx-background-color: D2EBF6;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my.voyage.ProfileController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="760.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ec9514" height="504.0" layoutX="162.0" layoutY="24.0" opacity="0.21" strokeType="INSIDE" width="580.0" />
+      <Label id="lblProfileGenderText" fx:id="lblProfileName" alignment="CENTER" layoutX="271.0" layoutY="215.0" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label id="lblProfilePhoneText" fx:id="lblProfileGender" alignment="CENTER" layoutX="271.0" layoutY="285.0" prefHeight="35.0" prefWidth="146.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="319.0" layoutY="392.0">
+         <children>
+            <Button id="btnLogOut" fx:id="btnLogOut" alignment="CENTER" mnemonicParsing="false" onAction="#logOut" prefHeight="48.0" prefWidth="104.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" text="Log out" textFill="#064857">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button id="btnEditProfile" fx:id="btnEditProfile" alignment="CENTER" mnemonicParsing="false" onAction="#editProfile" prefHeight="47.0" prefWidth="70.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" text="Edit" textAlignment="CENTER" textFill="#064857">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ImageView fitHeight="237.0" fitWidth="302.0" layoutX="358.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@pic1.png" />
+         </image>
+      </ImageView>
+      <Label id="lblProfileEmailText" fx:id="lblProfileEmail" alignment="CENTER" layoutX="514.0" layoutY="285.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label id="lblProfileEmail" fx:id="lblProfileEmailText" layoutX="459.0" layoutY="287.0" text="Email" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label id="lblProfilePhone" fx:id="lblProfilePhoneText" layoutX="452.0" layoutY="210.0" prefHeight="44.0" prefWidth="80.0" text="Phone" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label id="lblProfileGender" fx:id="lblProfileGenderText" layoutX="199.0" layoutY="287.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label id="lblProfileName" fx:id="lblProfileNameText" alignment="CENTER" layoutX="185.0" layoutY="197.0" style="-fx-background-radius: 20;" text="Name">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </Label>
+      <Label id="lblProfileNameText" fx:id="lblProfilePhone" alignment="CENTER" layoutX="520.0" layoutY="215.0" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="83.0" arcWidth="83.0" fill="#012f36" height="524.0" layoutX="14.0" layoutY="14.0" opacity="0.17" strokeType="INSIDE" width="131.0" />
+      <Button fx:id="btnHome" layoutX="38.0" layoutY="120.0" mnemonicParsing="false" onAction="#goHome" prefHeight="50.0" prefWidth="53.0" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnProfile" layoutX="38.0" layoutY="220.0" mnemonicParsing="false" onAction="#goProfile" prefHeight="65.0" prefWidth="76.0" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnTodoList" layoutX="38.0" layoutY="320.0" mnemonicParsing="false" onAction="#goTodoList" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@checklist%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnBudgetReport" layoutX="38.0" layoutY="420.0" mnemonicParsing="false" onAction="#goBudgetReport" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@money.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

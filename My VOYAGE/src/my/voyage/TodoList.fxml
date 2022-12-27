@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="550.0" minWidth="760.0" style="-fx-background-color: D2EBF6;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my.voyage.TodoListController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="761.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f7af43d1" height="480.0" layoutX="164.0" layoutY="52.0" opacity="0.34" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="580.0" />
+      <ListView fx:id="lvDone" layoutX="520.0" layoutY="100.0" opacity="0.9" prefHeight="342.0" prefWidth="210.0" style="-fx-background-color: cacdce;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ListView>
+      <ListView fx:id="lvTodo" layoutX="181.0" layoutY="100.0" opacity="0.9" prefHeight="342.0" prefWidth="210.0" style="-fx-background-color: d2ebf6;" />
+      <VBox alignment="CENTER" layoutX="388.0" layoutY="44.0" prefHeight="373.0" prefWidth="132.0">
+         <children>
+            <Button id="btnFromToDoToDone" fx:id="btnFromToDoToDone" alignment="CENTER" mnemonicParsing="false" onAction="#moveFromToDoToDone" prefHeight="39.0" prefWidth="47.0" style="-fx-background-color: F8B242;" text="&gt;">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnFromDoneToToDo" fx:id="btnFromDoneToToDo" alignment="CENTER" mnemonicParsing="false" onAction="#moveFromDoneToToDo" prefHeight="44.0" prefWidth="47.0" style="-fx-background-color: F8B242;" text="&lt;">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button id="btnClearLv" fx:id="btnClearLv" alignment="CENTER" mnemonicParsing="false" onAction="#confirmPopUpWindow" prefHeight="47.0" prefWidth="92.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" text="Clear" textFill="#064857">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <Rectangle arcHeight="83.0" arcWidth="83.0" fill="#012f36" height="524.0" layoutX="14.0" layoutY="14.0" opacity="0.17" strokeType="INSIDE" width="131.0" />
+      <Button fx:id="btnHome" layoutX="38.0" layoutY="120.0" mnemonicParsing="false" onAction="#goHome" prefHeight="50.0" prefWidth="53.0" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnProfile" layoutX="38.0" layoutY="220.0" mnemonicParsing="false" onAction="#goProfile" prefHeight="65.0" prefWidth="76.0" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@user.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnTodoList" layoutX="38.0" layoutY="320.0" mnemonicParsing="false" onAction="#goTodoList" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@checklist%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnBudgetReport" layoutX="38.0" layoutY="420.0" mnemonicParsing="false" onAction="#goBudgetReport" style="-fx-background-color: NONE; -fx-background-radius: 15;" textFill="#094857">
+         <font>
+            <Font name="Cairo-Regular" size="29.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="68.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@money.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <TextField fx:id="tfAddLv" layoutX="286.0" layoutY="458.0" prefHeight="45.0" prefWidth="210.0" />
+      <Button fx:id="btnAddLv" layoutX="520.0" layoutY="453.0" mnemonicParsing="false" onAction="#AddToToDoList" prefHeight="54.0" prefWidth="123.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" text="Add" textFill="#064857">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Text fill="#064857" layoutX="243.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To Do">
+         <font>
+            <Font name="Gill Sans Ultra Bold Condensed" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#064857" layoutX="569.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Done">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="36.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

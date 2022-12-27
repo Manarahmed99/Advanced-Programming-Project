@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainAnchor" maxHeight="550.0" maxWidth="760.0" onKeyPressed="#keyPress" style="-fx-background-color: ;" stylesheets="@StyleSheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="my.voyage.AddCityController">
+   <children>
+      <ImageView fitHeight="550.0" fitWidth="760.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.png" />
+         </image>
+      </ImageView>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="760.0" AnchorPane.bottomAnchor="0.0">
+         <center>
+            <BorderPane stylesheets="@StyleSheet.css" BorderPane.alignment="CENTER">
+               <center>
+                  <GridPane BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label fx:id="lblFormCityBudget" text="Budget" textFill="#064857" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblFormCityADate" text="Arrived Date" textFill="#064857" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblFormCityRDate" text="Return Date" textFill="#064857" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                           </font></Label>
+                        <Label fx:id="lblFormCityName" text="City Name" textFill="#064857" GridPane.halignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblFormCityHotel" text="Hotel Name" textFill="#064857" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblFormCityPhoto" stylesheets="@StyleSheet.css" text="Add Photo" textFill="#064857" GridPane.halignment="CENTER" GridPane.rowIndex="5">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font></Label>
+                        <Label fx:id="lblFormCityMembers" text="How Many Members" textFill="#064857" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+                           <font>
+                              <Font name="Berlin Sans FB Demi Bold" size="20.0" />
+                           </font></Label>
+                        <TextField fx:id="tfFormCityName" GridPane.columnIndex="1" />
+                        <TextField fx:id="tfFormCityBudget" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="tfFormCityHotel" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="tfFormCityMembers" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <DatePicker fx:id="dpFormCityADate" maxHeight="-Infinity" maxWidth="-Infinity" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="dpFormCityRDate" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button fx:id="btnCityPhoto" mnemonicParsing="false" onAction="#uploadCityPhoto" text="Select File" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                     <BorderPane.margin>
+                        <Insets left="50.0" />
+                     </BorderPane.margin>
+                  </GridPane>
+               </center>
+               <bottom>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label fx:id="error" textFill="#7a3310">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Label>
+                        <HBox alignment="CENTER" prefHeight="78.0" prefWidth="427.0" spacing="30.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnAddCity" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#addCity" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" text="Add" textAlignment="CENTER" textFill="#064857">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btnCancelNewCity" alignment="CENTER" contentDisplay="CENTER" layoutX="180.0" layoutY="41.0" mnemonicParsing="false" onAction="#cancelNewCity" prefHeight="37.0" prefWidth="87.0" style="-fx-background-color: F8B242; -fx-background-radius: 20;" text="Cancel" textAlignment="CENTER" textFill="#064857">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </bottom>
+               <top>
+                  <Text fill="#064857" strokeType="OUTSIDE" strokeWidth="0.0" text="Add City" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Gill Sans Ultra Bold Condensed" size="36.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets bottom="30.0" top="50.0" />
+                     </BorderPane.margin>
+                  </Text>
+               </top>
+            </BorderPane>
+         </center>
+         <right>
+            <ImageView fitHeight="550.0" fitWidth="319.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@pic5.png" />
+               </image>
+            </ImageView>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

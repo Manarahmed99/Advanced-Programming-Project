@@ -1,0 +1,32 @@
+
+AnchorPane {
+    -fx-background-color: D2EBF6;
+}
+
+Text {
+    -fx-font-family: "Gill Sans Ultra Bold Condensed"; 
+    -fx-font-size: 40;
+}
+
+Button {
+    -fx-background-color: F8B242;
+    -fx-background-radius: 20;
+    
+    -fx-font-family: "Gill Sans Ultra Bold Condensed"; 
+    -fx-font-size: 19;
+    -fx-font-color: 064857;
+    -fx-alignment: center;
+}
+Label{
+        -fx-font-family: "Berlin Sans FB Demi";
+        -fx-font-size: 20;
+        -fx-text-fill: #064857;
+}
+
+TextField {
+    -fx-background-color: FFFFFF;
+}
+
+.password-field{
+    -fx-background-color: F8B242;
+}
